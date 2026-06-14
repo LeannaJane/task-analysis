@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from './hooks/ThemeProvider';
+import { Sidebar } from './components/Sidebar';
 
 const App: React.FC = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -10,6 +11,7 @@ const App: React.FC = () => {
       <button onClick={toggleTheme} className='bg-black text-white '>
         Switch to {theme === 'light' ? 'dark' : 'light'} mode
       </button>
+      <Sidebar/>
     </div>
   );
 };
